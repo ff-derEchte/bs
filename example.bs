@@ -1,0 +1,20 @@
+lbl main {
+    << → Welcome ←
+    => bottles
+}
+
+lbl bottles {
+    » x <- 99
+    » y <- 2
+    => loop
+}
+
+lbl loop {
+    << x
+    << → Bottles of Beer on the Wall ←
+    » x --
+    => loop -> > x || y
+    << 1
+    << → Bottle of beer on the wall ←
+    ? 0
+}
